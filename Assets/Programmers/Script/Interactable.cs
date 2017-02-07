@@ -8,7 +8,7 @@ public class Interactable : MonoBehaviour {
     public Movable[] oggettiDisattivare;
     
 
-    void OnMouseDown ()
+    public void OnMouseDown ()
     {
 
         Debug.Log("prova");
