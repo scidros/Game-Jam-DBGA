@@ -66,7 +66,11 @@ public class GameController : MonoBehaviour {
         StartCoroutine(Project());
     }
 
-    
+    void Update()
+    {
+        if (dubbio.fillAmount >= 1)
+            SceneManager.LoadScene("GameOver");
+    }
 	
 
 }
