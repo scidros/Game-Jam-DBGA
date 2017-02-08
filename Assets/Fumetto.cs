@@ -28,7 +28,7 @@ public class Fumetto : MonoBehaviour {
 
     IEnumerator Ispirazione()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(4);
         gameObject.SetActive(false);
     }
 
@@ -64,7 +64,7 @@ public class Fumetto : MonoBehaviour {
             sc.x -= 0.2f;
             sc.y -= 0.2f;
 
-            if (sc.x <= 0f)
+            if (sc.x <= 0.1f)
             {
                 rt.localScale = new Vector3(1f, 1f);
                 employee.DubbioStart();
