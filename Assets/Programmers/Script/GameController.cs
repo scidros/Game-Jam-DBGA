@@ -6,6 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
+    [Header("Play Button Parameters")]
+    public float playButtonDecreaseDoubtAmount = 0.01f;
+    public float playButtonSecondsToWaitBeforeTimerIncrease = 1f;
+    public int playButtonTimerMaximumLimit = 20;
+
+    [Header("Employee Parameters")]
+    public int[] multiplier = new int[3] { 0, 1, 2 };
+
+    [Header("Toon Parameters")]
+    public float inspirationToonDeactivationWaitingTime = 2f;
+    public float doubtCloudIncreaseWaitingTime = 1f;
+    public float doubtCloudLocalScaleMaximumLimit = 1f;
+    public float doubtCloudLocalScaleIncreaseValue = 0.1f;
+
     public Image progetto;
     public Image dubbio;
     public Text time;

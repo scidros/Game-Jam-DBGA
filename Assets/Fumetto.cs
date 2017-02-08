@@ -28,13 +28,17 @@ public class Fumetto : MonoBehaviour {
 
     IEnumerator Ispirazione()
     {
+<<<<<<< HEAD
         yield return new WaitForSeconds(4);
+=======
+        yield return new WaitForSeconds(gElements.inspirationToonDeactivationWaitingTime);
+>>>>>>> 715e0154d074d8db7ef37f5cc215ca52a60a43bf
         gameObject.SetActive(false);
     }
 
     IEnumerator Nuvola()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(gElements.doubtCloudIncreaseWaitingTime);
         Increase();
         StartCoroutine(Nuvola());
 
@@ -42,14 +46,14 @@ public class Fumetto : MonoBehaviour {
 
     void Increase ()
     {
-        if (rt.localScale.x < 1f)
+        if (rt.localScale.x < gElements.doubtCloudLocalScaleMaximumLimit)
         {
             Vector3 sc = rt.localScale;
-            sc.x += 0.1f;
-            sc.y += 0.1f;
+            sc.x += gElements.doubtCloudLocalScaleIncreaseValue;
+            sc.y += gElements.doubtCloudLocalScaleIncreaseValue;
 
             if (sc.x > 1f)
-                rt.localScale = new Vector3(1f, 1f);
+                rt.localScale = new Vector3(gElements.doubtCloudLocalScaleMaximumLimit, gElements.doubtCloudLocalScaleMaximumLimit);
             else
                 rt.localScale = sc;
         }

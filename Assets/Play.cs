@@ -15,16 +15,16 @@ public class Play : MonoBehaviour {
 
     IEnumerator PlayMode()
     {
-        gElements.dubbio.fillAmount -= 0.01f;
+        gElements.dubbio.fillAmount -= gElements.playButtonDecreaseDoubtAmount;
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(gElements.playButtonSecondsToWaitBeforeTimerIncrease);
         timer++;
 
-        if (timer < 20)
+        if (timer < gElements.playButtonTimerMaximumLimit)
             StartCoroutine(PlayMode());
         else
         {
-            myEmployee.moltiplicatore = 1;
+            myEmployee.moltiplicatore = gElements.multiplier[1];
             this.gameObject.SetActive(false);
         }
      
@@ -37,7 +37,7 @@ public class Play : MonoBehaviour {
 
     public void Stop()
     {
-        myEmployee.moltiplicatore = 1;
+        myEmployee.moltiplicatore = gElements.multiplier[1];
         this.gameObject.SetActive(false);
         
     }

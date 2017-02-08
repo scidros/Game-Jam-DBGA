@@ -170,7 +170,6 @@ Galactic
 Generic
 Geriatric
 German
-Ghetto
 Giant
 Glowing
 Go Go
@@ -197,9 +196,7 @@ Hillbilly
 Hindu
 Hip-Hop^Hippo
 History of the
-Hitler's^Nazi
 Ho-Hum
-Holy
 Horrifying
 Hyper
 Imperial
@@ -237,7 +234,6 @@ Jackie Chan's
 Jamaican
 Japanese
 Jedi
-Jewish
 Johnny Turbo's
 John Romero's
 Kabuki
@@ -300,7 +296,6 @@ Miracle
 Monster^Monster Truck
 Monty Python's
 Morbid
-Morbidly Obese
 Mr.
 MTV's
 Muppet
@@ -361,7 +356,6 @@ Psychedelic
 Psycho
 Queen of the^Princess
 Quiet
-Rad
 Radical
 Radioactive
 Raging^Rage
@@ -392,7 +386,6 @@ Rushing^Rush
 Russian
 Samba de
 Samurai
-Satan's
 Savage
 Save Yourself from the
 Scandinavian
@@ -518,7 +511,6 @@ Zany
 Zombie^Zombies
 ----
 3D
-Acid
 Aerobics
 Afro
 Alien
@@ -611,10 +603,8 @@ Dance^Dance Mix|Dance Party|Dancers
 Dating
 Death^Deathmatch|of Death|of the Dead
 Deer Hunter
-Demon
 Dentist
 Desert^in the Desert
-Devil
 Dinosaur
 Disco
 Dodgeball^Baseball|Basketball|Boxing|Football|Paintbrawl|Pinball|Polo
@@ -700,14 +690,12 @@ Landmine
 Laser
 Lawnmower
 Lego
-Leisure Suit
 Lightning
 Limbo
 Lizard
 Llama
 Love^of Love|Romance
 Lowrider
-Mafia
 Magic^of Magic|of Might and Magic
 Mahjong
 Makeout
@@ -735,7 +723,6 @@ Mushroom
 Music^DJ
 Mutant
 NASCAR
-Nazi
 Night^Knights|Nightmare
 Ninja
 Nuclear
@@ -759,7 +746,6 @@ Pokemon
 Police
 Polka
 Pony
-Porn
 Princess
 Prison
 Programming
@@ -1059,7 +1045,6 @@ Invasion
 Island
 Jam
 Jamboree
-Jihad
 Joe
 Journey
 Jr.
@@ -1103,7 +1088,6 @@ of the Blood God
 of the Damned
 of the Dead
 of the Deep
-of the Third Reich
 on the Oregon Trail
 Offensive
 Omega
