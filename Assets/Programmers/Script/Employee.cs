@@ -15,6 +15,7 @@ public class Employee : MonoBehaviour {
     public Image fumetto;
     public bool activeEvents = true;
     private bool activePause = true;
+    public bool activeBoost = true;
     public GameObject play;
 
 
@@ -140,8 +141,30 @@ public class Employee : MonoBehaviour {
         moltiplicatore = 0;
         play.GetComponent<Play>().PlayStart();
     }
-  
-    
 
-    
+    public void BoostStart()
+    {
+        if (activeBoost == true)
+            {
+            HideMyButtons();
+            StartCoroutine(BoostEnable());
+            activeBoost = false;
+            }
+        
+    }
+
+    IEnumerator BoostEnable()
+    {
+        moltiplicatore = 2;
+
+        yield return new WaitForSeconds(10);
+
+        moltiplicatore = 1;
+        activeBoost = true;
+
+    }
+
+
+
+
 }
