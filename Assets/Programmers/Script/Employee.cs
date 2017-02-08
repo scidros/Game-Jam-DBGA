@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
+
+
 public class Employee : MonoBehaviour {
 
     public GameObject actions;
@@ -122,9 +124,6 @@ public class Employee : MonoBehaviour {
 
     public void Evento(int nDubbio)
     {
-        if (gElements.dubbio.fillAmount >= 1)
-            Debug.Log("sconfitta");
-
         gElements.dubbio.fillAmount += 0.01f;
 
         switch (nDubbio)

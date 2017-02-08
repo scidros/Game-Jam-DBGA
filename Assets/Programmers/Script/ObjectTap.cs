@@ -38,6 +38,7 @@ public class ObjectTap : MonoBehaviour {
 
         outlinedObject.SetActive(false);
         active = true;
+        StopAllCoroutines();
 	}
 
 
