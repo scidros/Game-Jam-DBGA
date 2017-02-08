@@ -13,7 +13,9 @@ public class Employee : MonoBehaviour {
     public int mioDubbio = 10;
     GameController gElements;
     public Image fumetto;
-    private bool activeEvents = true;
+    public bool activeEvents = true;
+    private bool activePause = true;
+    public GameObject play;
 
 
     void Start()
@@ -54,6 +56,16 @@ public class Employee : MonoBehaviour {
             actions.GetComponent<HideButtons>().State2();
         else if (this.gameObject.name == "E3")
             actions.GetComponent<HideButtons>().State3();
+    }
+
+    public void HideMyButtons()
+    {
+        if (this.gameObject.name == "E1")
+            actions.SetActive(false);
+        else if (this.gameObject.name == "E2")
+            actions.SetActive(false);
+        else if (this.gameObject.name == "E3")
+            actions.SetActive(false);
     }
 
     public void Mangiare()
@@ -103,6 +115,9 @@ public class Employee : MonoBehaviour {
 
     public void Evento(int nDubbio)
     {
+        if (gElements.dubbio.fillAmount >= 1)
+            Debug.Log("sconfitta");
+
         gElements.dubbio.fillAmount += 0.1f;
 
         switch (nDubbio)
@@ -117,6 +132,16 @@ public class Employee : MonoBehaviour {
                 break;
         }
     }
+
+    public void Pause()
+    {
+        HideMyButtons();
+        play.SetActive(true);
+        moltiplicatore = 0;
+        play.GetComponent<Play>().PlayStart();
+    }
+  
+    
 
     
 }

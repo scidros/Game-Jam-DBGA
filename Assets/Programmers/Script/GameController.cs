@@ -20,6 +20,9 @@ public class GameController : MonoBehaviour {
 
 	IEnumerator TimeBar ()
     {
+        if (timer <= 0)
+            Debug.Log("sconfitta");
+
         time.text = timer.ToString();
         timer--;
 
@@ -34,6 +37,9 @@ public class GameController : MonoBehaviour {
 	
     IEnumerator Project()
     {
+        if (progetto.fillAmount >= 1)
+            Debug.Log("Vittoria");
+
         yield return new WaitForSeconds(1);
 
         foreach (var impiegato in impigati)

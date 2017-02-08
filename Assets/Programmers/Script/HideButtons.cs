@@ -8,6 +8,7 @@ public class HideButtons : MonoBehaviour {
     public GameObject buttons2;
     public GameObject buttons3;
 
+
     void Start()
     {
         name = this.gameObject.name;

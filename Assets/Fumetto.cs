@@ -56,6 +56,7 @@ public class Fumetto : MonoBehaviour {
                 rt.localScale = new Vector3(1f, 1f);
                 employee.DubbioStart();
                 this.StopAllCoroutines();
+                employee.activeEvents = true;
                 this.gameObject.SetActive(false);
             }
             else
