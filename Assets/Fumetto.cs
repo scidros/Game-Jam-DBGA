@@ -8,7 +8,7 @@ public class Fumetto : MonoBehaviour {
     GameController gElements;
     RectTransform rt;
 
-    void Start ()
+    void Awake ()
     {
         rt = GetComponent <RectTransform>();
         gElements = FindObjectOfType<GameController>();
@@ -28,11 +28,7 @@ public class Fumetto : MonoBehaviour {
 
     IEnumerator Ispirazione()
     {
-<<<<<<< HEAD
-        yield return new WaitForSeconds(4);
-=======
         yield return new WaitForSeconds(gElements.inspirationToonDeactivationWaitingTime);
->>>>>>> 715e0154d074d8db7ef37f5cc215ca52a60a43bf
         gameObject.SetActive(false);
     }
 

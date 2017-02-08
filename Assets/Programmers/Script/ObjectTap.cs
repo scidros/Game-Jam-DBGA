@@ -66,8 +66,10 @@ public class ObjectTap : MonoBehaviour {
 
 	
 	
-	void OnMouseDown ()
+	public void OnMouseDown ()
     {
         notTouch = false;
-	}
+        StopAllCoroutines();
+        outlinedObject.SetActive(false);
+    }
 }
