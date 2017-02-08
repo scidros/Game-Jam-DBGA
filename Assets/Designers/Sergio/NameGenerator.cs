@@ -15,10 +15,9 @@ public class NameGenerator : MonoBehaviour {
 	void Start () {
 		badMatchWords = new List<string> ();
 		gameName = new string[3];
-		FileInfo theSourceFile = new FileInfo ("video_game_names.txt");
-		StreamReader reader = theSourceFile.OpenText();
+        TextAsset ta = Resources.Load<TextAsset>("video_game_names");
 
-		string completeFile = reader.ReadToEnd ();
+        string completeFile = ta.text;
 		AssignWords (completeFile);
 
 
@@ -42,8 +41,9 @@ public class NameGenerator : MonoBehaviour {
 		foreach (string word in allWords) 
 		{
 
-			if (word == "----") 
+			if (word.Contains("----")) 
 			{
+                Debug.Log("FOUND ---");
 				i++;
 				stringList.Add (i, new List<string>());
 				continue;
