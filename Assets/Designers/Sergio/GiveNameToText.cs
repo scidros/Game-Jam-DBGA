@@ -13,6 +13,6 @@ public class GiveNameToText : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		text.text = NameGenerator.gameName;
+		text.text = ModeManager.gameName;
 	}
 }

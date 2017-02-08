@@ -4,16 +4,22 @@ using System.IO;
 using System.Collections.Generic;
 using Random = UnityEngine.Random;
 
-public class NameGenerator : MonoBehaviour {
+public class ModeManager : MonoBehaviour {
+
+	public enum Difficolta
+	{
+		easy, medium, hard
+	};
 
 	Dictionary<int,List<string>> stringList;
 	List<string> badMatchWords;
 
+	public static Difficolta difficolta;
 	public static string gameName;
-
 
 	// Use this for initialization
 	void Start () {
+		DontDestroyOnLoad (this.gameObject);
 		badMatchWords = new List<string> ();
         TextAsset ta = Resources.Load<TextAsset>("video_game_names");
 
@@ -99,6 +105,12 @@ public class NameGenerator : MonoBehaviour {
 	{
 		gameName = DecideWord (0) + " " + DecideWord (1) + " " + DecideWord (2);
 		badMatchWords.Clear ();
+	}
+
+	public void AssegnaDifficolta(int diff)
+	{
+		difficolta = (Difficolta)diff;
+		Debug.Log (difficolta);
 	}
 
 
