@@ -2,19 +2,19 @@
 using System.Collections;
 using System.IO;
 using System.Collections.Generic;
+using Random = UnityEngine.Random;
 
 public class NameGenerator : MonoBehaviour {
 
 	Dictionary<int,List<string>> stringList;
 	List<string> badMatchWords;
 
-	public static string[] gameName;
+	public static string gameName;
 
 
 	// Use this for initialization
 	void Start () {
 		badMatchWords = new List<string> ();
-		gameName = new string[3];
         TextAsset ta = Resources.Load<TextAsset>("video_game_names");
 
         string completeFile = ta.text;
@@ -25,7 +25,7 @@ public class NameGenerator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		ComposeName ();
+		
 	}
 
 	private void AssignWords(string source)
@@ -95,12 +95,11 @@ public class NameGenerator : MonoBehaviour {
 		return true;
 	}
 
-	private void ComposeName()
+	public void ComposeName()
 	{
-		gameName[0] = DecideWord (0);
-		gameName[1] = DecideWord (1);
-		gameName[2] = DecideWord (2);
-		Debug.Log (gameName [0] + " " + gameName [1] + " " + gameName [2]);
+		gameName = DecideWord (0) + " " + DecideWord (1) + " " + DecideWord (2);
 		badMatchWords.Clear ();
 	}
+
+
 }
