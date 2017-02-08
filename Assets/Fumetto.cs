@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Fumetto : MonoBehaviour {
@@ -9,7 +10,7 @@ public class Fumetto : MonoBehaviour {
 
     void Start ()
     {
-        rt = GetComponent<RectTransform>();
+        rt = GetComponent <RectTransform>();
         gElements = FindObjectOfType<GameController>();
     }
 
@@ -22,7 +23,7 @@ public class Fumetto : MonoBehaviour {
     IEnumerator Nuvola()
     {
         yield return new WaitForSeconds(1);
-        Increase();
+       // Increase();
         StartCoroutine(Nuvola());
 
     }
@@ -41,7 +42,7 @@ public class Fumetto : MonoBehaviour {
                 rt.localScale = sc;
         }
 
-        gElements.dubbio.fillAmount = gElements.dubbio.fillAmount + (rt.localScale.x / 100f);
+        gElements.dubbio.fillAmount += rt.localScale.x / 100f;
     }
 
 
@@ -62,9 +63,4 @@ public class Fumetto : MonoBehaviour {
             else
                 rt.localScale = sc;
     }
-
-    void Update ()
-    {
-	
-	}
 }

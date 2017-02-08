@@ -17,6 +17,7 @@ public class Employee : MonoBehaviour {
     private bool activePause = true;
     public bool activeBoost = true;
     public GameObject play;
+    ObjectsContainer objContainer;
 
 
     void Start()
@@ -28,6 +29,7 @@ public class Employee : MonoBehaviour {
         actionsElements = FindObjectOfType<Actions>();
         gElements = FindObjectOfType<GameController>();
         StartCoroutine(Dubbio());
+        objContainer = FindObjectOfType<ObjectsContainer>();
     }
 
     public void Product()
@@ -119,7 +121,7 @@ public class Employee : MonoBehaviour {
         if (gElements.dubbio.fillAmount >= 1)
             Debug.Log("sconfitta");
 
-        gElements.dubbio.fillAmount += 0.1f;
+        gElements.dubbio.fillAmount += 0.01f;
 
         switch (nDubbio)
         {
@@ -129,7 +131,7 @@ public class Employee : MonoBehaviour {
                 activeEvents = false;
                 break;
             case 2:
-                Debug.Log("Evento 2");
+                objContainer.ActiveAnObject();
                 break;
         }
     }
