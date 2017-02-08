@@ -12,8 +12,7 @@ public class MainMenu : MonoBehaviour {
 	
 	public void StartSinglePlayer()
     {
-        //SceneManager.LoadScene(1);
-        Debug.Log("Vado alla scena scelta difficoltà");
+        SceneManager.LoadScene(1);
     }
 
     public void Credits()

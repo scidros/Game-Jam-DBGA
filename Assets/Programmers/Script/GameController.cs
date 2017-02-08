@@ -8,14 +8,29 @@ public class GameController : MonoBehaviour {
     public Image progetto;
     public Image dubbio;
     public Text time;
+    public Text title;
+    public int progressMod;
     public int timer = 300;
-    
+    public float[] difficultyMod;
     public List<Employee> impigati;
+
+    private ModeManager modeManager;
+    private float diffMod;
 	
     void Start()
     {
         StartCoroutine(Project());
         StartCoroutine(TimeBar());
+        modeManager = FindObjectOfType<ModeManager>();
+        if (modeManager)
+        {
+            title.text = modeManager.gameName;
+            diffMod = difficultyMod[(int)modeManager.difficolta];
+        }
+        else
+        {
+            diffMod = 1;
+        }
     }
 
 	IEnumerator TimeBar ()
@@ -44,7 +59,7 @@ public class GameController : MonoBehaviour {
 
         foreach (var impiegato in impigati)
         {
-            progetto.fillAmount += (impiegato.mySkill * impiegato.myProductivity * impiegato.moltiplicatore) / 100;
+            progetto.fillAmount += (impiegato.mySkill * impiegato.myProductivity * impiegato.moltiplicatore) / (progressMod * diffMod);
         }
 
         StartCoroutine(Project());

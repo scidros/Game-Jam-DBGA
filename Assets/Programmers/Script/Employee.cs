@@ -7,12 +7,14 @@ public class Employee : MonoBehaviour {
     public GameObject actions;
     public Image Productivity;
     public float mySkill;
+    public float myStamina;
     public float myProductivity = 0.5f;
     Actions actionsElements;
     public int moltiplicatore = 1;
     public int mioDubbio = 10;
     GameController gElements;
     public Image fumetto;
+    public Image ispirazione;
     public bool activeEvents = true;
     private bool activePause = true;
     public bool activeBoost = true;
@@ -24,6 +26,8 @@ public class Employee : MonoBehaviour {
     {
         mySkill = Random.Range(0.40f, 0.60f);
         mySkill = (float)System.Math.Round(mySkill, 2);
+        myStamina = Random.Range(0.9f, 1.1f);
+        myStamina = (float)System.Math.Round(myStamina, 2);
         Productivity.fillAmount = myProductivity;
         StartCoroutine(Produttività());
         actionsElements = FindObjectOfType<Actions>();
@@ -41,7 +45,7 @@ public class Employee : MonoBehaviour {
     {
         yield return new WaitForSeconds(1);
 
-        myProductivity -= 0.01f;
+        myProductivity -= 0.01f * myStamina;
         Productivity.fillAmount = myProductivity;
         if (myProductivity > 0)
             StartCoroutine(Produttività());
@@ -105,7 +109,7 @@ public class Employee : MonoBehaviour {
 
     IEnumerator Dubbio()
     {
-        yield return new WaitForSeconds(mioDubbio);
+        yield return new WaitForSeconds(mioDubbio + Random.Range(0, 9));
 
         while (moltiplicatore == 0)
             yield return null;
@@ -132,6 +136,8 @@ public class Employee : MonoBehaviour {
                 break;
             case 2:
                 objContainer.ActiveAnObject();
+                ispirazione.gameObject.SetActive(true);
+                ispirazione.GetComponent<Fumetto>().startIspirazione();
                 break;
         }
     }

@@ -20,10 +20,22 @@ public class Fumetto : MonoBehaviour {
 	   
 	}
 
+    public void startIspirazione()
+    {
+        StartCoroutine(Ispirazione());
+
+    }
+
+    IEnumerator Ispirazione()
+    {
+        yield return new WaitForSeconds(2);
+        gameObject.SetActive(false);
+    }
+
     IEnumerator Nuvola()
     {
         yield return new WaitForSeconds(1);
-       // Increase();
+        Increase();
         StartCoroutine(Nuvola());
 
     }

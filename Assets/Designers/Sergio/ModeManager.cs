@@ -14,8 +14,8 @@ public class ModeManager : MonoBehaviour {
 	Dictionary<int,List<string>> stringList;
 	List<string> badMatchWords;
 
-	public static Difficolta difficolta;
-	public static string gameName;
+	public Difficolta difficolta;
+	public string gameName;
     
 	void Start () {
 		DontDestroyOnLoad (this.gameObject);

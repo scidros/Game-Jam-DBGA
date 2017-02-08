@@ -6,15 +6,12 @@ public class ObjectTap : MonoBehaviour {
 
     public bool active = true;
     public bool notTouch = true;
+    public GameObject outlinedObject;
     GameController gElements;
-    Image sr;
-    Color a;
 
     void Start()
     {
         gElements = FindObjectOfType<GameController>();
-        sr = this.GetComponent<Image>();
-        a = sr.color;
     }
 
     public void Activate()
@@ -22,8 +19,7 @@ public class ObjectTap : MonoBehaviour {
         active = false;
         StartCoroutine(Time());
         StartCoroutine(Action());
-        a.a -= 0.50f;
-        sr.color = a;
+        outlinedObject.SetActive(true);
     }
 
     IEnumerator Time()
@@ -40,8 +36,7 @@ public class ObjectTap : MonoBehaviour {
     {
         yield return new WaitForSeconds(2);
 
-        a.a = 1f;
-        sr.color = a;
+        outlinedObject.SetActive(false);
         active = true;
 	}
 
