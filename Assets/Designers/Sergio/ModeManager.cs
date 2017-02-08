@@ -16,8 +16,7 @@ public class ModeManager : MonoBehaviour {
 
 	public static Difficolta difficolta;
 	public static string gameName;
-
-	// Use this for initialization
+    
 	void Start () {
 		DontDestroyOnLoad (this.gameObject);
 		badMatchWords = new List<string> ();
@@ -25,20 +24,12 @@ public class ModeManager : MonoBehaviour {
 
         string completeFile = ta.text;
 		AssignWords (completeFile);
-
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 	private void AssignWords(string source)
 	{
 		int i = 0;
 		string[] allWords = source.Split ('\n');
-		Debug.Log (allWords.Length);
 
 		stringList = new Dictionary<int, List<string>>();
 
@@ -49,7 +40,6 @@ public class ModeManager : MonoBehaviour {
 
 			if (word.Contains("----")) 
 			{
-                Debug.Log("FOUND ---");
 				i++;
 				stringList.Add (i, new List<string>());
 				continue;
@@ -57,7 +47,6 @@ public class ModeManager : MonoBehaviour {
 
 			stringList [i].Add (word);
 		}
-		Debug.Log (i);
 	}
 
 	public string DecideWord(int index)
@@ -110,7 +99,6 @@ public class ModeManager : MonoBehaviour {
 	public void AssegnaDifficolta(int diff)
 	{
 		difficolta = (Difficolta)diff;
-		Debug.Log (difficolta);
 	}
 
 

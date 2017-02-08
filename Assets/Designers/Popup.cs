@@ -5,17 +5,17 @@ using UnityEngine.UI;
 public class Popup : MonoBehaviour {
 
     public MainMenu mainMenu;
+    private Transform btnBack;
 
     public void TogglePopup()
     {
         gameObject.SetActive(true);
-        StartCoroutine(TogglePopupCoroutine());
-        Debug.Log(name);
+        StartCoroutine("TogglePopupCoroutine");
     }
 
     public IEnumerator TogglePopupCoroutine()
     {
-        GameObject btnBack = transform.Find("btnBack").gameObject;
+        btnBack = transform.Find("btnBack");
         mainMenu = FindObjectOfType<MainMenu>();
         CanvasGroup panelCanvas = GetComponent<CanvasGroup>();
         bool opening;
@@ -33,7 +33,10 @@ public class Popup : MonoBehaviour {
         }
         float elapsedTime = 0;
         gameObject.SetActive(true);
-        GetComponent<Button>().interactable = false;
+        if (GetComponent<Button>())
+        {
+            GetComponent<Button>().interactable = false;
+        }
         while (elapsedTime < mainMenu.fadeTime)
         {
             elapsedTime += Time.deltaTime;
@@ -47,7 +50,10 @@ public class Popup : MonoBehaviour {
             }
             yield return null;
         }
-        GetComponent<Button>().interactable = true;
+        if (GetComponent<Button>())
+        {
+            GetComponent<Button>().interactable = true;
+        }
         if (btnBack)
         {
             btnBack.GetComponent<Button>().interactable = true;

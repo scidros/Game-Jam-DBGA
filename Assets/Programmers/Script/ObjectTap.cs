@@ -1,19 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
 
 public class ObjectTap : MonoBehaviour {
 
     public bool active = true;
     public bool notTouch = true;
     GameController gElements;
-    SpriteRenderer sr;
+    Image sr;
     Color a;
 
     void Start()
     {
         gElements = FindObjectOfType<GameController>();
-        sr = this.GetComponent<SpriteRenderer>();
+        sr = this.GetComponent<Image>();
         a = sr.color;
     }
 
