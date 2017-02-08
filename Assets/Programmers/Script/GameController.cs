@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -36,7 +37,7 @@ public class GameController : MonoBehaviour {
 	IEnumerator TimeBar ()
     {
         if (timer <= 0)
-            Debug.Log("sconfitta");
+            SceneManager.LoadScene("GameOver");
 
         time.text = timer.ToString();
         timer--;
@@ -53,7 +54,7 @@ public class GameController : MonoBehaviour {
     IEnumerator Project()
     {
         if (progetto.fillAmount >= 1)
-            Debug.Log("Vittoria");
+            SceneManager.LoadScene("YouWin");
 
         yield return new WaitForSeconds(1);
 
