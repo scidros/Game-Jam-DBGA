@@ -16,11 +16,14 @@ public class Actions : MonoBehaviour {
 	
 	IEnumerator Eat ()
     {
+        employee.moltiplicatore = 0;
+
         yield return new WaitForSeconds(10);
         
 
         if (employee.myProductivity <= 0.01f)
         {
+            employee.moltiplicatore = 1;
             employee.myProductivity = 1;
             employee.Productivity.fillAmount = 1;
             employee.Product();

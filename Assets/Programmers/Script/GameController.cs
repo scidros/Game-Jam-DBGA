@@ -6,24 +6,31 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
     public Image progetto;
-    public int moltiplicatore = 1;
+    public Image dubbio;
+    public Text time;
+    public int timer = 300;
+    
     public List<Employee> impigati;
 	
     void Start()
     {
         StartCoroutine(Project());
+        StartCoroutine(TimeBar());
     }
 
 	IEnumerator TimeBar ()
     {
-        progetto.fillAmount -= 0.0033333333333333f;
+        time.text = timer.ToString();
+        timer--;
 
-        Debug.Log("ciao");
+        
 
         yield return new WaitForSeconds(1);
-        if (progetto.fillAmount > 0)
+        if (timer >= 0)
             StartCoroutine(TimeBar());
-	}
+        else
+            time.text = "0";
+    }
 	
     IEnumerator Project()
     {
@@ -31,14 +38,13 @@ public class GameController : MonoBehaviour {
 
         foreach (var impiegato in impigati)
         {
-            progetto.fillAmount += (impiegato.mySkill * impiegato.myProductivity * moltiplicatore) / 100;
+            progetto.fillAmount += (impiegato.mySkill * impiegato.myProductivity * impiegato.moltiplicatore) / 100;
         }
 
         StartCoroutine(Project());
     }
 
+    
 	
-	void Update () {
-	
-	}
+
 }
