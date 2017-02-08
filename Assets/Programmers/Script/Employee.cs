@@ -47,7 +47,7 @@ public class Employee : MonoBehaviour {
             StartCoroutine(Produttività());
     }
 
-	void OnMouseDown ()
+	public void OnMouseDown ()
     {
         actions.SetActive(true);
 
