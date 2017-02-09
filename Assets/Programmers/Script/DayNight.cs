@@ -22,25 +22,25 @@ public class DayNight : MonoBehaviour {
 	
 	IEnumerator Cycle ()
     {
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(75);
         day.gameObject.SetActive(false);
         night1.gameObject.SetActive(true);
         night2.gameObject.SetActive(true);
         night3.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(65);
         day.gameObject.SetActive(true);
         night1.gameObject.SetActive(false);
         night2.gameObject.SetActive(false);
         night3.gameObject.SetActive(false);
 
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(75);
         day.gameObject.SetActive(false);
         night1.gameObject.SetActive(true);
         night2.gameObject.SetActive(true);
         night3.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(65);
         musicManager.PlayMusic(2);
         day.gameObject.SetActive(true);
         night1.gameObject.SetActive(false);
