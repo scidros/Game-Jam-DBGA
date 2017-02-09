@@ -11,9 +11,12 @@ public class SoundManager : MonoBehaviour {
         SoundManager[] soundManager = FindObjectsOfType<SoundManager>();
         if (soundManager.Length > 1)
         {
-            Destroy(soundManager[0].gameObject);
+            Destroy(soundManager[1].gameObject);
         }
-        DontDestroyOnLoad(this.gameObject);
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
 
         foreach (Transform soundObject in gameObject.transform)
         {

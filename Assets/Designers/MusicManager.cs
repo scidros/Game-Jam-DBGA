@@ -11,10 +11,13 @@ public class MusicManager : MonoBehaviour {
         MusicManager[] musicManager = FindObjectsOfType<MusicManager>();
         if (musicManager.Length > 1)
         {
-            Destroy(musicManager[0].gameObject);
+            Destroy(musicManager[1].gameObject);
         }
-        DontDestroyOnLoad(this.gameObject);
-
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
+        
         foreach (Transform musicObject in gameObject.transform)
         {
             musicObjects.Add(musicObject.gameObject);
