@@ -7,11 +7,14 @@ public class Play : MonoBehaviour {
     GameController gElements;
     public Employee myEmployee;
     int timer = 0;
+    SoundManager sElements;
 
     void Awake()
     {
         gElements = FindObjectOfType<GameController>();
         StartCoroutine(PlayMode());
+        sElements = FindObjectOfType<SoundManager>();
+
     }
 
     IEnumerator PlayMode()
@@ -36,6 +39,8 @@ public class Play : MonoBehaviour {
 
     public void PlayStart()
     {
+
+
         StartCoroutine(PlayMode());
 
         Color col = myEmployee.GetComponent<Image>().color;
@@ -45,6 +50,8 @@ public class Play : MonoBehaviour {
 
     public void Stop()
     {
+        sElements.PlaySound(3);
+
         myEmployee.moltiplicatore = gElements.multiplier[1];
         this.gameObject.SetActive(false);
 

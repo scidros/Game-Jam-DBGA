@@ -22,6 +22,7 @@ public class Employee : MonoBehaviour {
     public bool activeBoost = true;
     public GameObject play;
     ObjectsContainer objContainer;
+    SoundManager sElements;
 
 
     void Start()
@@ -36,6 +37,7 @@ public class Employee : MonoBehaviour {
         gElements = FindObjectOfType<GameController>();
         StartCoroutine(Dubbio());
         objContainer = FindObjectOfType<ObjectsContainer>();
+        sElements = FindObjectOfType<SoundManager>();
     }
 
     public void Product()
@@ -81,6 +83,7 @@ public class Employee : MonoBehaviour {
     {
         StartCoroutine(Eat());
         actions.SetActive(false);
+        sElements.PlaySound(5);
 
     }
 
@@ -147,6 +150,7 @@ public class Employee : MonoBehaviour {
         play.SetActive(true);
         moltiplicatore = 0;
         play.GetComponent<Play>().PlayStart();
+        sElements.PlaySound(2);
     }
 
     public void BoostStart()
