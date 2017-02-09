@@ -20,6 +20,7 @@ public class MainMenu : MonoBehaviour {
 	
 	public void StartSinglePlayer()
     {
+        musicManager.PlayMusic(1);
         SceneManager.LoadScene("Game");
     }
 
