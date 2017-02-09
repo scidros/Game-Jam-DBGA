@@ -61,12 +61,14 @@ public class ObjectTap : MonoBehaviour {
     {
         yield return new WaitForSeconds(2);
 
+        notTouch = false;
+
         StopCoroutine("FlashObj");
         outlinedObject.SetActive(false);
         
         active = true;
         this.GetComponent<Button>().interactable = false;
-        StopCoroutine(Action());
+        
 	}
 
 
@@ -77,7 +79,7 @@ public class ObjectTap : MonoBehaviour {
         notTouch = false;
         active = true;
         StopCoroutine(Action());
-        StopCoroutine(Time());
+        
         StopCoroutine(FlashObj());
         outlinedObject.SetActive(false);
         this.GetComponent<Button>().interactable = false;
