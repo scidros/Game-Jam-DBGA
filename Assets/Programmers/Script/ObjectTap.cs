@@ -8,14 +8,17 @@ public class ObjectTap : MonoBehaviour {
     public bool notTouch = true;
     public GameObject outlinedObject;
     GameController gElements;
+    SoundManager sElements;
 
     void Start()
     {
         gElements = FindObjectOfType<GameController>();
+        sElements = FindObjectOfType<SoundManager>();
     }
 
     public void Activate()
     {
+        this.GetComponent<Button>().interactable = true;
         active = false;
         StartCoroutine(Time());
         StartCoroutine(Action());
@@ -60,6 +63,7 @@ public class ObjectTap : MonoBehaviour {
         outlinedObject.SetActive(false);
         
         active = true;
+        this.GetComponent<Button>().interactable = false;
         StopAllCoroutines();
 	}
 
@@ -71,5 +75,8 @@ public class ObjectTap : MonoBehaviour {
         notTouch = false;
         StopAllCoroutines();
         outlinedObject.SetActive(false);
+        this.GetComponent<Button>().interactable = false;
+        sElements.PlaySound(0);
+
     }
 }

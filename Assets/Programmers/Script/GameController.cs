@@ -31,12 +31,15 @@ public class GameController : MonoBehaviour {
 
     private ModeManager modeManager;
     private float diffMod;
+    MusicManager mElements;
 	
     void Start()
     {
         StartCoroutine(Project());
         StartCoroutine(TimeBar());
         modeManager = FindObjectOfType<ModeManager>();
+        mElements = FindObjectOfType<MusicManager>();
+
         if (modeManager)
         {
             title.text = modeManager.gameName;
@@ -51,7 +54,10 @@ public class GameController : MonoBehaviour {
 	IEnumerator TimeBar ()
     {
         if (timer <= 0)
+        {
+            mElements.PlayMusic(3);
             SceneManager.LoadScene("GameOver");
+        }
 
         time.text = timer.ToString();
         timer--;
@@ -68,7 +74,11 @@ public class GameController : MonoBehaviour {
     IEnumerator Project()
     {
         if (progetto.fillAmount >= 1)
+        {
+            mElements.PlayMusic(3);
             SceneManager.LoadScene("YouWin");
+        }
+            
 
         yield return new WaitForSeconds(1);
 
@@ -83,7 +93,12 @@ public class GameController : MonoBehaviour {
     void Update()
     {
         if (dubbio.fillAmount >= 1)
+        {
+            mElements.PlayMusic(3);
             SceneManager.LoadScene("GameOver");
+
+        }
+            
     }
 	
 
