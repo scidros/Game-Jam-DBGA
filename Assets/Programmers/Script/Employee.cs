@@ -166,6 +166,8 @@ public class Employee : MonoBehaviour {
 
     public void BoostStart()
     {
+        sElements.PlaySound(1);
+
         if (activeBoost == true)
             {
             HideMyButtons();

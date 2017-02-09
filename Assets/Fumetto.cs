@@ -6,14 +6,17 @@ public class Fumetto : MonoBehaviour {
 
     public Employee employee;
     GameController gElements;
-    RectTransform rt;
+    
     SoundManager sElements;
+    Color col;
 
     void Awake ()
     {
-        rt = GetComponent <RectTransform>();
+        
         gElements = FindObjectOfType<GameController>();
         sElements = FindObjectOfType<SoundManager>();
+        col = this.GetComponent<Image>().color;
+        
     }
 
 	public void startNuvola ()
@@ -47,19 +50,13 @@ public class Fumetto : MonoBehaviour {
 
     void Increase ()
     {
-        if (rt.localScale.x < gElements.doubtCloudLocalScaleMaximumLimit)
+        if (col.a < 1)
         {
-            Vector3 sc = rt.localScale;
-            sc.x += gElements.doubtCloudLocalScaleIncreaseValue;
-            sc.y += gElements.doubtCloudLocalScaleIncreaseValue;
-
-            if (sc.x > 1f)
-                rt.localScale = new Vector3(gElements.doubtCloudLocalScaleMaximumLimit, gElements.doubtCloudLocalScaleMaximumLimit);
-            else
-                rt.localScale = sc;
+            col.a += 0.1f;
+            this.GetComponent<Image>().color = col;
         }
 
-        gElements.dubbio.fillAmount += rt.localScale.x / 100f;
+        gElements.dubbio.fillAmount += col.a / 100f;
     }
 
 
@@ -67,19 +64,19 @@ public class Fumetto : MonoBehaviour {
     {
             sElements.PlaySound(7);
             
-            Vector3 sc = rt.localScale;
-            sc.x -= 0.2f;
-            sc.y -= 0.2f;
+            
+            col.a -= 0.1f;
+            
 
-            if (sc.x <= 0.1f)
+
+        if (col.a <= 0.1f)
             {
-                rt.localScale = new Vector3(1f, 1f);
                 employee.DubbioStart();
                 this.StopAllCoroutines();
                 employee.activeEvents = true;
                 this.gameObject.SetActive(false);
             }
             else
-                rt.localScale = sc;
+                this.GetComponent<Image>().color = col;
     }
 }
