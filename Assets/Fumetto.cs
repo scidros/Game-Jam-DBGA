@@ -59,7 +59,7 @@ public class Fumetto : MonoBehaviour {
                 rt.localScale = sc;
         }
 
-        gElements.dubbio.fillAmount += rt.localScale.x / 100f;
+        gElements.dubbio.fillAmount += rt.localScale.x / 150f;
     }
 
 
