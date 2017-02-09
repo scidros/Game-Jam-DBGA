@@ -24,6 +24,7 @@ public class ObjectTap : MonoBehaviour {
         StartCoroutine(Action());
         outlinedObject.SetActive(true);
         StartCoroutine("FlashObj");
+        notTouch = true;
     }
 
     IEnumerator FlashObj()
@@ -73,6 +74,7 @@ public class ObjectTap : MonoBehaviour {
 	public void OnMouseDown ()
     {
         notTouch = false;
+        active = true;
         StopAllCoroutines();
         outlinedObject.SetActive(false);
         this.GetComponent<Button>().interactable = false;

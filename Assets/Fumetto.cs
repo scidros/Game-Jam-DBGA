@@ -18,6 +18,7 @@ public class Fumetto : MonoBehaviour {
 
 	public void startNuvola ()
     {
+        sElements.PlaySound(6);
         StartCoroutine(Nuvola());
 	   
 	}
@@ -37,7 +38,7 @@ public class Fumetto : MonoBehaviour {
 
     IEnumerator Nuvola()
     {
-        sElements.PlaySound(6);
+        
         yield return new WaitForSeconds(gElements.doubtCloudIncreaseWaitingTime);
         Increase();
         StartCoroutine(Nuvola());
