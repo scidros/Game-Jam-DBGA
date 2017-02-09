@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 460b16403ba739d4c909aa93f6b0fc6e
-timeCreated: 1486591540
+timeCreated: 1486599919
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -77,10 +77,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 716
-        width: 149
-        height: 234
+        x: 0
+        y: 714
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -90,10 +90,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 152
-        y: 716
-        width: 149
-        height: 234
+        x: 151
+        y: 714
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -103,10 +103,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 303
-        y: 716
-        width: 149
-        height: 234
+        x: 302
+        y: 714
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,10 +116,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 454
-        y: 716
-        width: 150
-        height: 234
+        x: 453
+        y: 714
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +129,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 605
-        y: 716
-        width: 150
-        height: 234
+        x: 604
+        y: 714
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,10 +142,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 756
-        y: 716
-        width: 150
-        height: 234
+        x: 755
+        y: 714
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +155,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_6
       rect:
         serializedVersion: 2
-        x: 1
-        y: 478
-        width: 150
-        height: 234
+        x: 0
+        y: 476
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_7
       rect:
         serializedVersion: 2
-        x: 152
-        y: 478
-        width: 150
-        height: 234
+        x: 151
+        y: 476
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_8
       rect:
         serializedVersion: 2
-        x: 303
-        y: 478
-        width: 149
-        height: 234
+        x: 302
+        y: 476
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_9
       rect:
         serializedVersion: 2
-        x: 454
-        y: 478
-        width: 149
-        height: 234
+        x: 453
+        y: 476
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,10 +207,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_10
       rect:
         serializedVersion: 2
-        x: 605
-        y: 478
-        width: 149
-        height: 234
+        x: 604
+        y: 476
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,10 +220,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_11
       rect:
         serializedVersion: 2
-        x: 756
-        y: 478
-        width: 149
-        height: 234
+        x: 755
+        y: 476
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,10 +233,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_12
       rect:
         serializedVersion: 2
-        x: 1
-        y: 240
-        width: 149
-        height: 234
+        x: 0
+        y: 238
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,10 +246,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_13
       rect:
         serializedVersion: 2
-        x: 152
-        y: 240
-        width: 150
-        height: 234
+        x: 151
+        y: 238
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,10 +259,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_14
       rect:
         serializedVersion: 2
-        x: 303
-        y: 240
-        width: 150
-        height: 234
+        x: 302
+        y: 238
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,10 +272,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_15
       rect:
         serializedVersion: 2
-        x: 454
-        y: 240
-        width: 150
-        height: 234
+        x: 453
+        y: 238
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -285,10 +285,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_16
       rect:
         serializedVersion: 2
-        x: 605
-        y: 240
-        width: 150
-        height: 234
+        x: 604
+        y: 238
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,10 +298,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_17
       rect:
         serializedVersion: 2
-        x: 756
-        y: 240
-        width: 150
-        height: 234
+        x: 755
+        y: 238
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,10 +311,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_18
       rect:
         serializedVersion: 2
-        x: 1
-        y: 2
-        width: 149
-        height: 234
+        x: 0
+        y: 0
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,10 +324,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_19
       rect:
         serializedVersion: 2
-        x: 152
-        y: 2
-        width: 149
-        height: 234
+        x: 151
+        y: 0
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +337,10 @@ TextureImporter:
       name: artista_animaz_spritesheet_20
       rect:
         serializedVersion: 2
-        x: 303
-        y: 2
-        width: 149
-        height: 234
+        x: 302
+        y: 0
+        width: 151
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

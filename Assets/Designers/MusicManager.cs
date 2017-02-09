@@ -23,7 +23,7 @@ public class MusicManager : MonoBehaviour {
 
     public void PlayMusic(int n)
     {
-        foreach (GameObject musicObject in gameObject.transform)
+        foreach (Transform musicObject in gameObject.transform)
         {
             musicObject.GetComponent<AudioSource>().Stop();
         }

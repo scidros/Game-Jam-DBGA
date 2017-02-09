@@ -9,35 +9,39 @@ public class DayNight : MonoBehaviour {
     public Image night1;
     public Image night2;
     public Image night3;
+
+    private MusicManager musicManager;
     
 
     void Start ()
     {
+        musicManager = FindObjectOfType<MusicManager>();
         StartCoroutine(Cycle());
 	}
 	
 	
 	IEnumerator Cycle ()
     {
-        yield return new WaitForSeconds(60);
+        yield return new WaitForSeconds(7);
         day.gameObject.SetActive(false);
         night1.gameObject.SetActive(true);
         night2.gameObject.SetActive(true);
         night3.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(60);
+        yield return new WaitForSeconds(6);
         day.gameObject.SetActive(true);
         night1.gameObject.SetActive(false);
         night2.gameObject.SetActive(false);
         night3.gameObject.SetActive(false);
 
-        yield return new WaitForSeconds(60);
+        yield return new WaitForSeconds(7);
         day.gameObject.SetActive(false);
         night1.gameObject.SetActive(true);
         night2.gameObject.SetActive(true);
         night3.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(60);
+        yield return new WaitForSeconds(4);
+        musicManager.PlayMusic(2);
         day.gameObject.SetActive(true);
         night1.gameObject.SetActive(false);
         night2.gameObject.SetActive(false);
