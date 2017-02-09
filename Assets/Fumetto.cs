@@ -21,6 +21,9 @@ public class Fumetto : MonoBehaviour {
 
 	public void startNuvola ()
     {
+        col.a = 1;
+        this.GetComponent<Image>().color = col;
+
         sElements.PlaySound(6);
         StartCoroutine(Nuvola());
 	   
