@@ -20,6 +20,12 @@ public class GameController : MonoBehaviour {
     public float doubtCloudLocalScaleMaximumLimit = 1f;
     public float doubtCloudLocalScaleIncreaseValue = 0.1f;
 
+    [Header("ObjectTap Parameters")]
+    public float objTapDivide = 180f;
+
+    [Header("ObjectTap Parameters")]
+    public float fumettoDivide = 180f;
+
     public Image progetto;
     public Image dubbio;
     public Text time;

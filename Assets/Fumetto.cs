@@ -60,7 +60,7 @@ public class Fumetto : MonoBehaviour {
         }
 
 
-        gElements.dubbio.fillAmount += col.a / 100f;
+        gElements.dubbio.fillAmount += col.a / gElements.fumettoDivide;
 
        
 

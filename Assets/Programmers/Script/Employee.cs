@@ -57,16 +57,20 @@ public class Employee : MonoBehaviour {
 
 	public void OnMouseDown ()
     {
-        actions.SetActive(true);
+        if (moltiplicatore != 0)
+        {
+            actions.SetActive(true);
 
-        actionsElements.employee = this.GetComponent<Employee>();
+            actionsElements.employee = this.GetComponent<Employee>();
 
-        if (this.gameObject.name == "imgPG1")
-            actions.GetComponent<HideButtons>().State1();
-        else if (this.gameObject.name == "imgPG2")
-            actions.GetComponent<HideButtons>().State2();
-        else if (this.gameObject.name == "imgPG3")
-            actions.GetComponent<HideButtons>().State3();
+            if (this.gameObject.name == "imgPG1")
+                actions.GetComponent<HideButtons>().State1();
+            else if (this.gameObject.name == "imgPG2")
+                actions.GetComponent<HideButtons>().State2();
+            else if (this.gameObject.name == "imgPG3")
+                actions.GetComponent<HideButtons>().State3();
+        }
+        
     }
 
     public void HideMyButtons()
