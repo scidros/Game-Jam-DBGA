@@ -6,6 +6,12 @@ public class Popup : MonoBehaviour {
 
     public MainMenu mainMenu;
     private Transform btnBack;
+    private SoundManager soundManager;
+
+    void Start()
+    {
+        soundManager = FindObjectOfType<SoundManager>();
+    }
 
     public void TogglePopup()
     {
