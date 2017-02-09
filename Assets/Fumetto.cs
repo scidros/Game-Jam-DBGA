@@ -7,11 +7,13 @@ public class Fumetto : MonoBehaviour {
     public Employee employee;
     GameController gElements;
     RectTransform rt;
+    SoundManager sElements;
 
     void Awake ()
     {
         rt = GetComponent <RectTransform>();
         gElements = FindObjectOfType<GameController>();
+        sElements = FindObjectOfType<SoundManager>();
     }
 
 	public void startNuvola ()
@@ -28,12 +30,14 @@ public class Fumetto : MonoBehaviour {
 
     IEnumerator Ispirazione()
     {
+        sElements.PlaySound(6);
         yield return new WaitForSeconds(gElements.inspirationToonDeactivationWaitingTime);
         gameObject.SetActive(false);
     }
 
     IEnumerator Nuvola()
     {
+        sElements.PlaySound(6);
         yield return new WaitForSeconds(gElements.doubtCloudIncreaseWaitingTime);
         Increase();
         StartCoroutine(Nuvola());
@@ -60,6 +64,8 @@ public class Fumetto : MonoBehaviour {
 
     public void Decrease ()
     {
+            sElements.PlaySound(7);
+            
             Vector3 sc = rt.localScale;
             sc.x -= 0.2f;
             sc.y -= 0.2f;
