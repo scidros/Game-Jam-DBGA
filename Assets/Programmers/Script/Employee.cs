@@ -61,21 +61,21 @@ public class Employee : MonoBehaviour {
 
         actionsElements.employee = this.GetComponent<Employee>();
 
-        if (this.gameObject.name == "E1")
+        if (this.gameObject.name == "imgPG1")
             actions.GetComponent<HideButtons>().State1();
-        else if (this.gameObject.name == "E2")
+        else if (this.gameObject.name == "imgPG2")
             actions.GetComponent<HideButtons>().State2();
-        else if (this.gameObject.name == "E3")
+        else if (this.gameObject.name == "imgPG3")
             actions.GetComponent<HideButtons>().State3();
     }
 
     public void HideMyButtons()
     {
-        if (this.gameObject.name == "E1")
+        if (this.gameObject.name == "imgPG1")
             actions.SetActive(false);
-        else if (this.gameObject.name == "E2")
+        else if (this.gameObject.name == "imgPG2")
             actions.SetActive(false);
-        else if (this.gameObject.name == "E3")
+        else if (this.gameObject.name == "imgPG3")
             actions.SetActive(false);
     }
 

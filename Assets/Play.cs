@@ -53,11 +53,12 @@ public class Play : MonoBehaviour {
         sElements.PlaySound(3);
 
         myEmployee.moltiplicatore = gElements.multiplier[1];
-        this.gameObject.SetActive(false);
-
         Color col = myEmployee.GetComponent<Image>().color;
         col.a = 1;
         myEmployee.GetComponent<Image>().color = col;
+        this.gameObject.SetActive(false);
+
+        
 
     }
 }
