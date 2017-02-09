@@ -76,7 +76,7 @@ public class ObjectTap : MonoBehaviour {
         StopAllCoroutines();
         outlinedObject.SetActive(false);
         this.GetComponent<Button>().interactable = false;
-        sElements.PlaySound(7);
+        sElements.PlaySound(0);
 
     }
 }
