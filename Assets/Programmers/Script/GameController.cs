@@ -48,7 +48,20 @@ public class GameController : MonoBehaviour {
 
         if (modeManager)
         {
-            title.text = modeManager.gameName;
+            string suffix = "";
+            switch ((int)modeManager.difficolta)
+            {
+                case 0:
+                    suffix = " (Endless Run)";
+                    break;
+                case 1:
+                    suffix = " (Shooter)";
+                    break;
+                case 2:
+                    suffix = " (MMORPG)";
+                    break;
+            }
+            title.text = modeManager.gameName + suffix;
             diffMod = difficultyMod[(int)modeManager.difficolta];
         }
         else

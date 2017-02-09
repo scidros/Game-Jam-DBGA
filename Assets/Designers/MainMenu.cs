@@ -7,14 +7,12 @@ public class MainMenu : MonoBehaviour {
 
     public GameObject pnlCredits;
     public GameObject[] pnlTutorials;
-    public SoundManager soundManager;
     public MusicManager musicManager;
 
     public float fadeTime;
 
     void Start()
     {
-        soundManager = FindObjectOfType<SoundManager>();
         musicManager = FindObjectOfType<MusicManager>();
     }
 	
@@ -26,7 +24,6 @@ public class MainMenu : MonoBehaviour {
 
     public void Credits()
     {
-        pnlCredits.SetActive(true);
         pnlCredits.GetComponent<Popup>().TogglePopup();
     }
 

@@ -8,15 +8,11 @@ public class Popup : MonoBehaviour {
     private Transform btnBack;
     private SoundManager soundManager;
 
-    void Start()
-    {
-        soundManager = FindObjectOfType<SoundManager>();
-    }
-
     public void TogglePopup()
     {
-        soundManager.PlaySound(7);
         gameObject.SetActive(true);
+        soundManager = FindObjectOfType<SoundManager>();
+        soundManager.PlaySound(7);
         StartCoroutine("TogglePopupCoroutine");
     }
 

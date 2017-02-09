@@ -22,7 +22,7 @@ public class ModeManager : MonoBehaviour {
         ModeManager[] modeManager = FindObjectsOfType<ModeManager>();
         if (modeManager.Length > 1)
         {
-            Destroy(modeManager[0].gameObject);
+            Destroy(modeManager[1].gameObject);
         }
         else
         {
