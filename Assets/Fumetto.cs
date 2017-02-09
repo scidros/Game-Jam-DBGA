@@ -56,11 +56,11 @@ public class Fumetto : MonoBehaviour {
             this.GetComponent<Image>().color = col;
         }
 
-<<<<<<< HEAD
+
         gElements.dubbio.fillAmount += col.a / 100f;
-=======
-        gElements.dubbio.fillAmount += rt.localScale.x / 150f;
->>>>>>> 922b91fa0e0d0d725a5d5cc3a2fbcd54fd9b5843
+
+       
+
     }
 
 
