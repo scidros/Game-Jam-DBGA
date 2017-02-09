@@ -17,6 +17,7 @@ public class ObjectTap : MonoBehaviour {
         sElements = FindObjectOfType<SoundManager>();
     }
 
+
     public void Activate()
     {
         this.GetComponent<Button>().interactable = true;
