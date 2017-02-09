@@ -9,6 +9,7 @@ public class ObjectTap : MonoBehaviour {
     public GameObject outlinedObject;
     GameController gElements;
     SoundManager sElements;
+    public GameObject ispirazione;
 
     void Start()
     {
@@ -79,6 +80,7 @@ public class ObjectTap : MonoBehaviour {
         outlinedObject.SetActive(false);
         this.GetComponent<Button>().interactable = false;
         sElements.PlaySound(0);
+        ispirazione.SetActive(false);
 
     }
 }

@@ -137,7 +137,7 @@ public class Employee : MonoBehaviour {
                 activeEvents = false;
                 break;
             case 2:
-                objContainer.ActiveAnObject();
+                objContainer.ActiveAnObject(ispirazione.gameObject);
                 ispirazione.gameObject.SetActive(true);
                 ispirazione.GetComponent<Fumetto>().startIspirazione();
                 break;
