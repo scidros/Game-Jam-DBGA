@@ -13,11 +13,15 @@ public class ObjectsContainer : MonoBehaviour {
 	}
 	
 	
-	public void ActiveAnObject ()
+	public void ActiveAnObject (GameObject a)
     {
         ObjectTap obj = listaOggetti[Random.Range(0, listaOggetti.Count)];
 
         if (obj.active == true)
+        {
             obj.Activate();
+            obj.ispirazione = a;
+        }
+            
 	}
 }

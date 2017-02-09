@@ -9,6 +9,7 @@ public class ObjectTap : MonoBehaviour {
     public GameObject outlinedObject;
     GameController gElements;
     SoundManager sElements;
+    public GameObject ispirazione;
 
     void Start()
     {
@@ -60,12 +61,14 @@ public class ObjectTap : MonoBehaviour {
     {
         yield return new WaitForSeconds(2);
 
+        notTouch = false;
+
         StopCoroutine("FlashObj");
         outlinedObject.SetActive(false);
         
         active = true;
         this.GetComponent<Button>().interactable = false;
-        StopAllCoroutines();
+        
 	}
 
 
@@ -75,10 +78,13 @@ public class ObjectTap : MonoBehaviour {
     {
         notTouch = false;
         active = true;
-        StopAllCoroutines();
+        StopCoroutine(Action());
+        
+        StopCoroutine(FlashObj());
         outlinedObject.SetActive(false);
         this.GetComponent<Button>().interactable = false;
         sElements.PlaySound(0);
+        ispirazione.SetActive(false);
 
     }
 }

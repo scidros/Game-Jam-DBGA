@@ -103,7 +103,11 @@ public class Employee : MonoBehaviour {
             Product();
         }
         else
+        {
             myProductivity = 1;
+            moltiplicatore = 1;
+        }
+            
 
     }
 
@@ -137,7 +141,7 @@ public class Employee : MonoBehaviour {
                 activeEvents = false;
                 break;
             case 2:
-                objContainer.ActiveAnObject();
+                objContainer.ActiveAnObject(ispirazione.gameObject);
                 ispirazione.gameObject.SetActive(true);
                 ispirazione.GetComponent<Fumetto>().startIspirazione();
                 break;
