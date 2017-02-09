@@ -17,11 +17,12 @@ public class ModeManager : MonoBehaviour {
 	public Difficolta difficolta;
 	public string gameName;
     
-	void Start () {
+	void Start ()
+    {
         ModeManager[] modeManager = FindObjectsOfType<ModeManager>();
         if (modeManager.Length > 1)
         {
-            Destroy(modeManager[1].gameObject);
+            Destroy(modeManager[0].gameObject);
         }
         else
         {

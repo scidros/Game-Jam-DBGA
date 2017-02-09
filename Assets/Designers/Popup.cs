@@ -9,6 +9,7 @@ public class Popup : MonoBehaviour {
 
     public void TogglePopup()
     {
+        soundManager.PlaySound(7);
         gameObject.SetActive(true);
         StartCoroutine("TogglePopupCoroutine");
     }

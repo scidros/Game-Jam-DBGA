@@ -28,12 +28,10 @@ public class MainMenu : MonoBehaviour {
     {
         pnlCredits.SetActive(true);
         pnlCredits.GetComponent<Popup>().TogglePopup();
-        soundManager.PlaySound(7);
     }
 
     public void Tutorial()
     {
         pnlTutorials[0].GetComponent<Popup>().TogglePopup();
-        soundManager.PlaySound(7);
     }
 }
