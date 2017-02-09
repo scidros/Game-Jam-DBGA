@@ -52,7 +52,7 @@ public class ObjectTap : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.1f);
 
-        gElements.dubbio.fillAmount += 0.01f;
+        gElements.dubbio.fillAmount += (1f / 180f);
 
         if (notTouch == true)
             StartCoroutine(Time());
