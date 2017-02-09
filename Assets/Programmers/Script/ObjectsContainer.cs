@@ -21,6 +21,7 @@ public class ObjectsContainer : MonoBehaviour {
         {
             obj.Activate();
             obj.ispirazione = a;
+
         }
             
 	}
