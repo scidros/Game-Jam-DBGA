@@ -33,6 +33,7 @@ public class Play : MonoBehaviour {
             Color col = myEmployee.GetComponent<Image>().color;
             col.a = 1;
             myEmployee.GetComponent<Image>().color = col;
+            timer = 0;
         }
      
     }
