@@ -21,9 +21,12 @@ public class ModeManager : MonoBehaviour {
         ModeManager[] modeManager = FindObjectsOfType<ModeManager>();
         if (modeManager.Length > 1)
         {
-            Destroy(modeManager[0].gameObject);
+            Destroy(modeManager[1].gameObject);
         }
-        DontDestroyOnLoad (this.gameObject);
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
 		badMatchWords = new List<string> ();
         TextAsset ta = Resources.Load<TextAsset>("video_game_names");
 

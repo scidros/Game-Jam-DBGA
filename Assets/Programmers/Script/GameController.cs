@@ -78,7 +78,6 @@ public class GameController : MonoBehaviour {
             mElements.PlayMusic(3);
             SceneManager.LoadScene("YouWin");
         }
-            
 
         yield return new WaitForSeconds(1);
 
