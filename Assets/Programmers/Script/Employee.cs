@@ -49,7 +49,7 @@ public class Employee : MonoBehaviour {
     {
         yield return new WaitForSeconds(1);
 
-        myProductivity -= 0.01f * myStamina;
+        myProductivity -= 0.01f * myStamina * moltiplicatore;
         Productivity.fillAmount = myProductivity;
         if (myProductivity > 0)
             StartCoroutine(Produttività());
@@ -92,8 +92,15 @@ public class Employee : MonoBehaviour {
     {
         moltiplicatore = 0;
 
+        Color col = GetComponent<Image>().color;
+        col.a = 0.5f;
+        GetComponent<Image>().color = col;
+
         yield return new WaitForSeconds(10);
 
+        
+        col.a = 1;
+        GetComponent<Image>().color = col;
 
         if (myProductivity <= 0.01f)
         {
