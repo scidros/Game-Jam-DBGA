@@ -66,7 +66,7 @@ public class ObjectTap : MonoBehaviour {
         
         active = true;
         this.GetComponent<Button>().interactable = false;
-        StopAllCoroutines();
+        StopCoroutine(Action());
 	}
 
 
@@ -76,7 +76,9 @@ public class ObjectTap : MonoBehaviour {
     {
         notTouch = false;
         active = true;
-        StopAllCoroutines();
+        StopCoroutine(Action());
+        StopCoroutine(Time());
+        StopCoroutine(FlashObj());
         outlinedObject.SetActive(false);
         this.GetComponent<Button>().interactable = false;
         sElements.PlaySound(0);

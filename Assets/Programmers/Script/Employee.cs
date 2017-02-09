@@ -103,7 +103,11 @@ public class Employee : MonoBehaviour {
             Product();
         }
         else
+        {
             myProductivity = 1;
+            moltiplicatore = 1;
+        }
+            
 
     }
 
