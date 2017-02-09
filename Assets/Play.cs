@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Play : MonoBehaviour {
 
@@ -26,6 +27,9 @@ public class Play : MonoBehaviour {
         {
             myEmployee.moltiplicatore = gElements.multiplier[1];
             this.gameObject.SetActive(false);
+            Color col = myEmployee.GetComponent<Image>().color;
+            col.a = 1;
+            myEmployee.GetComponent<Image>().color = col;
         }
      
     }
@@ -33,12 +37,20 @@ public class Play : MonoBehaviour {
     public void PlayStart()
     {
         StartCoroutine(PlayMode());
+
+        Color col = myEmployee.GetComponent<Image>().color;
+        col.a = 0.5f;
+        myEmployee.GetComponent<Image>().color = col;
     }
 
     public void Stop()
     {
         myEmployee.moltiplicatore = gElements.multiplier[1];
         this.gameObject.SetActive(false);
-        
+
+        Color col = myEmployee.GetComponent<Image>().color;
+        col.a = 1;
+        myEmployee.GetComponent<Image>().color = col;
+
     }
 }
